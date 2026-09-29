@@ -1,0 +1,14 @@
+[
+  {
+    "origin": [
+      "http://localhost:3000",
+      "https://osdragomilovic.web.app",
+      "https://osdragomilovic.firebaseapp.com",
+      "https://www.os-dragomilovic.com",
+      "https://os-dragomilovic.com"
+    ],
+    "method": ["GET", "POST", "PUT", "DELETE", "HEAD"],
+    "responseHeader": ["*"],
+    "maxAgeSeconds": 3600
+  }
+]
