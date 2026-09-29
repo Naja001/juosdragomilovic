@@ -34,3 +34,4 @@ The service worker is registered in production only. It caches versioned Next.js
 ## Environment variables
 
 Firebase browser configuration uses the `NEXT_PUBLIC_FIREBASE_*` variables. Firebase Admin powers server-rendered content and protected API routes. Resend is used by the contact endpoint. No secrets are included in this copy.
+# juosdragomilovic
