@@ -67,7 +67,7 @@ export default function NewsList({ news, basePath = "/news" }: NewsListProps) {
               <Link
                 href={href}
                 transitionTypes={["nav-forward"]}
-                className={`focus-ring block ${featured ? "min-h-80 lg:min-h-[31rem]" : "rounded-[1.6rem]"}`}
+                className={`focus-ring block ${featured ? "min-h-80 lg:min-h-124" : "rounded-[1.6rem]"}`}
               >
                 <ViewTransition
                   name={`news-image-${item.id}`}
@@ -76,7 +76,7 @@ export default function NewsList({ news, basePath = "/news" }: NewsListProps) {
                 >
                   <div
                     className={`relative overflow-hidden bg-slate-200 ${
-                      featured ? "h-full min-h-80" : "aspect-[16/11] rounded-[1.6rem]"
+                      featured ? "h-full min-h-80" : "aspect-16/11 rounded-[1.6rem]"
                     }`}
                   >
                     {imageUrl ? (

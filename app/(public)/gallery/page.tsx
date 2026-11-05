@@ -79,11 +79,6 @@ export default async function GalleryPage({ searchParams }: GalleryPageProps) {
           description="Trenuci iz učionica, sa radionica, događaja i projekata — sačuvani kao vizuelni dnevnik naše školske zajednice."
           icon={Images}
           tone="coral"
-          aside={
-            <p className="max-w-56 text-sm leading-6 text-white/55">
-              Izaberite fotografiju za veliki prikaz i krećite se strelicama kroz kolekciju.
-            </p>
-          }
         />
 
         <section className="paper-grid py-16 sm:py-20">

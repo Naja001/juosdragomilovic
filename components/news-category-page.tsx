@@ -6,7 +6,7 @@ import Pagination from "@/components/pagination";
 import { PageIntro } from "@/components/page-intro";
 import { PageTransition } from "@/components/page-transition";
 
-const NEWS_PER_PAGE = 6;
+const NEWS_PER_PAGE = 7;
 type NewsCategory = "school" | "eco";
 
 interface NewsCategoryPageProps {
@@ -77,16 +77,7 @@ export default async function NewsCategoryPage({
           }
           icon={isEco ? Leaf : Newspaper}
           tone={isEco ? "green" : "blue"}
-          aside={
-            isEco ? undefined : (
-              <div className="flex items-baseline gap-2 rounded-2xl border border-white/12 bg-white/7 px-5 py-4 backdrop-blur">
-                <span className="text-3xl font-black">{result.news.length}</span>
-                <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/50">
-                  objava na stranici
-                </span>
-              </div>
-            )
-          }
+          
         />
 
         <section className="paper-grid py-16 sm:py-20">

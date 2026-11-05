@@ -9,7 +9,7 @@ export default function NotFound() {
           <Compass className="size-6" />
         </span>
         <p className="font-editorial mt-8 text-8xl italic leading-none text-[#158bd2]">404</p>
-        <h1 className="mt-6 text-4xl font-black tracking-[-0.05em] text-[#071f32]">
+        <h1 className="mt-6 text-4xl font-black tracking-tighter text-[#071f32]">
           Ova stranica nije pronađena.
         </h1>
         <p className="mt-4 leading-7 text-slate-600">

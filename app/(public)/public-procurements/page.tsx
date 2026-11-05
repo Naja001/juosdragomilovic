@@ -52,11 +52,6 @@ export default async function PublicProcurementsPage() {
           description="Dokumentacija i informacije vezane za postupke javnih nabavki naše škole."
           icon={FileCheck2}
           tone="yellow"
-          aside={
-            <p className="max-w-56 text-sm leading-6 text-white/55">
-              Dokumenta su dostupna u izvornom formatu i otvaraju se u novoj kartici.
-            </p>
-          }
         />
         <section className="paper-grid py-16 sm:py-20">
           <div className="site-container max-w-5xl">

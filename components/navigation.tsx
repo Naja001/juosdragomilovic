@@ -5,14 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Clock3,
-  MapPin,
-  Menu,
-  Phone,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, Clock3, MapPin, Menu, Phone, X } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa";
 
 const navigation = [
@@ -99,7 +92,7 @@ export function Navigation() {
       </div>
 
       <div className="border-b border-slate-200/80 bg-[rgb(251_250_246/0.94)] backdrop-blur-xl">
-        <div className="site-container flex h-[4.65rem] items-center justify-between gap-6">
+        <div className="site-container flex min-h-20 items-center justify-between gap-6 py-3">
           <Link
             href="/"
             transitionTypes={["nav-back"]}
@@ -107,14 +100,15 @@ export function Navigation() {
             className="focus-ring group flex shrink-0 items-center gap-3 rounded-lg"
             aria-label="OŠ Drago Milović — početna"
           >
-            <span className="relative flex size-12 items-center justify-center overflow-hidden rounded-[0.9rem] bg-white shadow-[0_8px_26px_-14px_rgb(7_31_50/45%)] ring-1 ring-slate-200/80">
+            <span className="relative flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-slate-200/80">
               <Image
                 src="/images/logoOsDragoM.png"
-                alt=""
+                alt="Logo OŠ Drago Milović"
                 fill
                 priority
-                sizes="48px"
-                className="scale-[1.55] object-cover object-center transition-transform duration-500 group-hover:scale-[1.65]"
+                quality={100}
+                sizes="56px"
+                className="object-contain"
               />
             </span>
             <span className="hidden sm:block">
@@ -138,7 +132,9 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  transitionTypes={[item.href === "/" ? "nav-back" : "nav-forward"]}
+                  transitionTypes={[
+                    item.href === "/" ? "nav-back" : "nav-forward",
+                  ]}
                   aria-current={active ? "page" : undefined}
                   className={`focus-ring relative rounded-full px-3 py-2 text-[0.78rem] font-bold transition-colors ${
                     active
@@ -170,7 +166,11 @@ export function Navigation() {
               onClick={() => setIsMenuOpen((open) => !open)}
               className="focus-ring flex size-11 items-center justify-center rounded-full bg-[#071f32] text-white xl:hidden"
             >
-              {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+              {isMenuOpen ? (
+                <X className="size-5" />
+              ) : (
+                <Menu className="size-5" />
+              )}
             </button>
           </div>
         </div>
@@ -184,10 +184,13 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[4.65rem] h-[calc(100dvh-4.65rem)] overflow-y-auto bg-[#071f32] text-white lg:top-[6.9rem] lg:h-[calc(100dvh-6.9rem)] xl:hidden"
+            className="fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-[#071f32] text-white lg:top-29 xl:hidden"
           >
             <div className="ink-grid min-h-full px-5 pb-8 pt-6 sm:px-8">
-              <nav aria-label="Mobilna navigacija" className="mx-auto max-w-2xl">
+              <nav
+                aria-label="Mobilna navigacija"
+                className="mx-auto max-w-2xl"
+              >
                 {navigation.map((item, index) => {
                   const active = isActive(item.href);
 
